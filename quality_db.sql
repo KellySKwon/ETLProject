@@ -1,8 +1,8 @@
-CREATE DATABASE Quality_db;
+CREATE DATABASE IF NOT EXISTS Quality_db;
 USE Quality_db;
 
 -- Create tables for raw data to be loaded into
-drop table quality_final;
+drop table IF EXISTS quality_final;
 CREATE TABLE quality_final (
   Rank INT PRIMARY KEY,
   City TEXT,
@@ -21,6 +21,9 @@ CREATE TABLE quality_final (
   State_Long TEXT,
   Abbreviation TEXT
 );
+
+
+
 
 select * from quality_final;
 
